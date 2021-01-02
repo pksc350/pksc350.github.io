@@ -51,8 +51,8 @@
 
 ## Wireframes:
 
-![](images/SooksmaScrambleTitle)
-![](images/SooksmaScrambleGameBoard)
+![](images/SooksmaScrambleTitle.png)
+![](images/SooksmaScrambleGameBoard.png)
 
 ##Technologies Used:
 
