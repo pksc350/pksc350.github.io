@@ -125,3 +125,10 @@ form {
   font-family: Oswald;
   font-size: 20px;
 }
+
+#submit {
+  background-color: white;
+}
+button {
+  background-color: white;
+}
