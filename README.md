@@ -26,6 +26,9 @@
   - If the user hits the required points or exceeds it, they move on to the next round
   - If the user does not meet the points requirement, they go back to round 1
 
+**Letter Values**
+![](images/LetterValues.png)
+
 **Future Goal: Challenge Mode**
 
 - When a user uses a letter, it disappears and another letter is randomly generated from the “letter bank”
