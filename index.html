@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="styles.css">
+
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
+        <script src="./script.js" defer></script>
+
+        <title>Sooksma Scramble</title>
+    </head>
+    <body>
+
+        <h1 id="welcome">Welcome to</h1>
+        <h1 id="game-title">Sooksma Scramble</h1>
+        <img src=”https://image.pngaaa.com/877/351877-middle.png” alt=”Cartoon egg with a cape and fork”>
+
+
+        <main>
+            <div id="level-announcement">
+                <p id="level">Level 1</p>
+                <p id="points-needed">Need 50 points to move to Round 2</p>
+            </div>
+
+            <button id="reset-button">Reset</button>
+
+            <div class="container gameboard">
+                <div id=”sq1”>1</div>
+                <div id=”sq2”>2</div>
+                <div id=”sq3”>3</div>
+                <div id=”sq4”>4</div>
+                <div id=”sq5”>5</div>
+                <div id=”sq6”>6</div>       
+                <div id=”sq7”>7</div>
+                <div id=”sq8”>8</div>
+                <div id=”sq9”>9</div>
+                <div id=”sq10”>10</div>
+                <div id=”sq11”>11</div>
+                <div id=”sq12”>12</div>
+                <div id=”sq13”>13</div>
+                <div id=”sq14”>14</div>
+                <div id=”sq15”>15</div>
+                <div id=”sq16”>16</div>
+
+                <div id="found-words"></div>
+                <h2>Found Words</h2>
+
+                <div id="words-list-container"></div>
+                <div id="words-points-container"></div>
+
+            </div>
+
+
+            <div class="submit-words">
+                <form>
+                    <input type="text" id="chosen-letters">
+                    <input type="submit" id="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="timer">
+
+                <div id="countdown">
+                    <p>Time Remaining:</p>
+                </div>
+
+                <button id="pause">Pause</button>
+            </div>
+        </main>
+
+    </body>
+</html>
