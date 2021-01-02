@@ -85,6 +85,10 @@ td {
   margin-left: 10px;
 }
 
+#running-points {
+  margin-left: 20px;
+}
+
 form {
   display: flex;
   justify-content: center;
