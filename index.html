@@ -23,54 +23,68 @@
         <!--JavaScript-->
         <script src="./script.js" defer></script>
 
+        <!--FONTS-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&family=Sacramento&display=swap" rel="stylesheet">
+
         <title>Sooksma Scramble</title>
     </head>
     <body>
 
         <h1 id="welcome">Welcome to</h1>
-        <h1 id="game-title">Sooksma Scramble</h1>
-        <img src="images/GudetamaWithGlasses.png" alt="Cartoon egg with glasses and bowtie" height=100px>
+        <div class="title">
+        <h1 id="game-title">Sooksma Scramble<img src="images/GudetamaWithGlasses.png" alt="Cartoon egg with glasses and bowtie" height=100px></h1>
+
+        </div>
 
 
         <main>
-            <div id="level-announcement">
+            <div class="row">
+            <div id="level-announcement" class="col-md">
                 <p id="level">Level 1</p>
-                <p id="points-needed">Need 50 points to move to Round 2</p>
+                <p id="points-needed">Need <mark>50 points</mark> to move on to <mark>Level 2</mark>
+                </p>
+                <button id="reset-button" class="col-2">Reset</button>
             </div>
 
-            <button id="reset-button">Reset</button>
+            
+        </div>
 
             <div class="container gameboard">
-                <div class="row">
-                <div class="col-sm">
-                <div id=”sq1”>1</div>
-                <div id=”sq2”>2</div>
-                <div id=”sq3”>3</div>
-                <div id=”sq4”>4</div>
-                </div>
-                <div class="col-sm">
-                <div id=”sq5”>5</div>
-                <div id=”sq6”>6</div>       
-                <div id=”sq7”>7</div>
-                <div id=”sq8”>8</div>
-                </div>
-                <div class="col-sm">
-                <div id=”sq9”>9</div>
-                <div id=”sq10”>10</div>
-                <div id=”sq11”>11</div>
-                <div id=”sq12”>12</div>
-                </div>
-                <div class="col-sm">
-                <div id=”sq13”>13</div>
-                <div id=”sq14”>14</div>
-                <div id=”sq15”>15</div>
-                <div id=”sq16”>16</div>
+                <table>
+                    <tr>
+                    <td id="1">1</td>
+                    <td id="2">2</td>
+                    <td id="3">3</td>
+                    <td id="4">4</td>
+                    </tr>
+                    <tr>
+                        <td id="5">5</td>
+                        <td id="6">6</td>
+                        <td id="7">7</td>
+                        <td id="8">8</td>
+                        </tr>
+                        <tr>
+                            <td id="9">9</td>
+                            <td id="10">10</td>
+                            <td id="11">11</td>
+                            <td id="12">12</td>
+                            </tr>
+                            <tr>
+                                <td id="13">13</td>
+                                <td id="14">14</td>
+                                <td id="15">15</td>
+                                <td id="16">16</td>
+                                </tr>
+                </table>
 
             <div id="found-words"></div>
-                <h2>Found Words</h2>
-
+                <div><h2 id="found-words-title">Found Words</h2><div>
+                
+                <div class="word-point-box">
                 <div id="words-list container"></div>
                 <div id="words-points container"></div>
+                </div>
             </div>
             </div>
 

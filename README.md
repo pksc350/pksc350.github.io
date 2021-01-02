@@ -60,6 +60,7 @@
 - CSS
 - JavaScript
 - Bootstrap
+- Google Fonts
 
 ## Approach:
 

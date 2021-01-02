@@ -1,3 +1,74 @@
-.letter-squares {
+#welcome {
+  font-family: Lato;
+  font-size: 60px;
+  text-align: center;
+}
+
+#game-title {
+  font-family: Sacramento;
+  font-size: 85px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+#level {
+  font-family: Lato;
+  font-size: 30px;
+}
+
+#reset-button {
+  height: 40px;
+  width: 70px;
+  margin: 10px 0 0 450px;
+  font-family: Oswald;
+  font-size: 20px;
+}
+
+#points-needed {
+  font-family: Lato;
+  font-size: 30px;
+  text-align: center;
+}
+
+mark {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
+table {
+  height: 350px;
+  width: 350px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+table,
+td,
+tr {
   border: 1px solid black;
+}
+
+td {
+  text-align: center;
+  font-size: 25px;
+}
+
+.gameboard {
+  display: flex;
+}
+
+.word-point-box {
+  height: 300px;
+  width: 200px;
+  border: 2px solid black;
+}
+
+#found-words-title {
+  margin-left: 18px;
+  font-family: Sacramento;
+  font-size: 30px;
 }
