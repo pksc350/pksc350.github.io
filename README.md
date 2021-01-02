@@ -29,7 +29,7 @@
 **Future Goal: Challenge Mode**
 
 - When a user uses a letter, it disappears and another letter is randomly generated from the “letter bank”
-- There will be a letter bank view, so you can see how many of each letter you have left
+  - There will be a letter bank view, so you can see how many of each letter you have left
 
 **User Stories:**
 
