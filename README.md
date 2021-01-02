@@ -59,6 +59,7 @@
 - HTML
 - CSS
 - JavaScript
+- Bootstrap
 
 ## Approach:
 
