@@ -38,9 +38,13 @@ const gameSquares = {
     $sq16: $('#16'), 
 }
 
-// document.getElementById("table").innerHTML = letterBoard
-
 gameSquares.$sq1.html(letterBoard)
+
+for (const x in gameSquares){
+    gameSquares[x].html(letterBoard)
+        
+        console.log(gameSquares[x])
+}
 
 // Object.keys(gameSquares).forEach(getLetter())
 
