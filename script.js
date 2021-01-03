@@ -8,15 +8,16 @@ let letterBank = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "C", "C
 let letterBoard = [];
 
 function getLetter() {
-    randomLetter = 
-    letterBank[Math.floor(Math.random() * letterBank.length)]
+    randomLetter = letterBank[Math.floor(Math.random() * letterBank.length)]
 
     return randomLetter
 }
 
 letterBoard.push(getLetter())
+letterBank.splice(letterBank.indexOf(randomLetter), 1)
 
 console.log(letterBoard)
+console.log(letterBank)
 
 const gameSquares = {
     sq1: $('#1'), 
