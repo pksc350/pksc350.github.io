@@ -14,15 +14,13 @@ function getLetter() {
 }
 for (let a = 0; a < 16; a++)
 
-
 //NOTE // Generates array to hold random letters
 letterBoard.push(getLetter())
 console.log(letterBoard)
 for (let y = 0; y < letterBoard.length; y++)
 console.log(letterBoard[y])
-// letterBoard.forEach(element)
 
-letterBank.splice(letterBank.indexOf(randomLetter), 1)
+// letterBank.splice(letterBank.indexOf(randomLetter), 1)
 
 console.log(letterBank)
 
