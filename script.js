@@ -1,22 +1,29 @@
 let randomLetter;
 
-//Letter Bank for Squares to choose from
+//NOTE //Letter Bank for Squares to choose from
 let letterBank = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "C", "C", "D", "D", "D", "D", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "F", "F", "G", "G", "G", "H", "H", "I", "I", "I", "I", "I", "I", "I", "I", "I", "J", "K", "L", "L", "L", "L", "M", "M", "N", "N", "N", "N", "N", "N", "O", "O", "O", "O", "O", "O", "O", "O", "P", "P", "Q", "R", "R", "R", "R", "R", "R", "S", "S", "S", "S", "T", "T", "T", "T", "T", "T", "U", "U", "U", "U", "V", "V", "W", "W", "X", "Y", "Y", "Z"]
 // for (let i = 0; i < letterBank.length; i++)
 
 let letterBoard = [];
 
-//Getting a random letter from the letter bank
+//NOTE //Getting 16 random letters from the letter bank
 function getLetter() {
     randomLetter = letterBank[Math.floor(Math.random() * letterBank.length)]
 
     return randomLetter
 }
+for (let a = 0; a < 16; a++)
 
+
+//NOTE // Generates array to hold random letters
 letterBoard.push(getLetter())
+console.log(letterBoard)
+for (let y = 0; y < letterBoard.length; y++)
+console.log(letterBoard[y])
+// letterBoard.forEach(element)
+
 letterBank.splice(letterBank.indexOf(randomLetter), 1)
 
-console.log(letterBoard)
 console.log(letterBank)
 
 const gameSquares = {
@@ -38,15 +45,28 @@ const gameSquares = {
     $sq16: $('#16'), 
 }
 
-gameSquares.$sq1.html(letterBoard)
+// gameSquares.$sq1.html(letterBoard)
 
-for (const x in gameSquares){
-    gameSquares[x].html(letterBoard)
-        
-        console.log(gameSquares[x])
-}
+//NOTE //Looping through the object to place letters on the board
+// for (const x in gameSquares){
 
-// Object.keys(gameSquares).forEach(getLetter())
+//     console.log(gameSquares[x])
+//         gameSquares[x].html(letterBoard)
+// }
 
-
-// console.log(gameSquares)
+gameSquares.$sq1.html(letterBoard[0])
+gameSquares.$sq2.html(letterBoard[1])
+gameSquares.$sq3.html(letterBoard[2])
+gameSquares.$sq4.html(letterBoard[3])
+gameSquares.$sq5.html(letterBoard[4])
+gameSquares.$sq6.html(letterBoard[5])
+gameSquares.$sq7.html(letterBoard[6])
+gameSquares.$sq8.html(letterBoard[7])
+gameSquares.$sq9.html(letterBoard[8])
+gameSquares.$sq10.html(letterBoard[9])
+gameSquares.$sq11.html(letterBoard[10])
+gameSquares.$sq12.html(letterBoard[11])
+gameSquares.$sq13.html(letterBoard[12])
+gameSquares.$sq14.html(letterBoard[13])
+gameSquares.$sq15.html(letterBoard[14])
+gameSquares.$sq16.html(letterBoard[15])
