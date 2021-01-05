@@ -99,8 +99,11 @@ let countdown = setInterval(function(){
 //     sq1.style.backgroundColor = "grey"
 // })
 
-//NOTE Function to pick first letter
+//NOTE Function to pick letters to make words
 const table = document.querySelector("table")
-let firstLetter = table.addEventListener('click', evt => {
-    console.log(evt.target.innerText)
+let words = table.addEventListener('click', evt => {
+    let chosenLetter = evt.target.innerText
+    console.log(chosenLetter)
+    evt.target.style.backgroundColor = "#c2e3e3"
+    $("#chosen-letters").append(chosenLetter)
 })

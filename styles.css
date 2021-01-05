@@ -100,14 +100,30 @@ form {
 #chosen-letters {
   width: 200px;
   font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  text-align: center;
 }
 
 #submit {
   height: 40px;
   width: 70px;
-  margin-left: 25px;
+  margin-left: 100px;
   font-family: Oswald;
   font-size: 20px;
+}
+
+#clear {
+  height: 40px;
+  width: 70px;
+  margin-left: 8px;
+  font-family: Oswald;
+  font-size: 20px;
+  background-color: white;
+}
+
+.submit-words {
+  display: flex;
+  justify-content: center;
 }
 
 .timer {
