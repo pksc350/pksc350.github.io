@@ -78,3 +78,17 @@ gameSquares.$sq13.html(letterBoard[12])
 gameSquares.$sq14.html(letterBoard[13])
 gameSquares.$sq15.html(letterBoard[14])
 gameSquares.$sq16.html(letterBoard[15])
+
+let counter = 60 
+ setInterval(function(){
+    counter --;
+
+    if (counter >= 0) {
+        span = document.getElementById("timer")
+        span.innerHTML = `${counter}`;
+    }
+
+    if (counter === 0){
+    clearInterval(counter)
+    }
+}, 1000)

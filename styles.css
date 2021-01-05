@@ -162,3 +162,7 @@ button {
 .game-screen {
   display: none;
 }
+
+#timer {
+  margin-left: 20px;
+}
