@@ -79,8 +79,9 @@ gameSquares.$sq14.html(letterBoard[13])
 gameSquares.$sq15.html(letterBoard[14])
 gameSquares.$sq16.html(letterBoard[15])
 
+//NOTE Timer - Stack Overflow
 let counter = 60 
- setInterval(function(){
+let countdown = setInterval(function(){
     counter --;
 
     if (counter >= 0) {
@@ -92,3 +93,14 @@ let counter = 60
     clearInterval(counter)
     }
 }, 1000)
+
+// const sq1 = document.getElementById("1")
+// sq1.addEventListener('click', event => {
+//     sq1.style.backgroundColor = "grey"
+// })
+
+//NOTE Function to pick first letter
+const table = document.querySelector("table")
+let firstLetter = table.addEventListener('click', evt => {
+    console.log(evt.target.innerText)
+})
