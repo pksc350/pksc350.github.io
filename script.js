@@ -12,17 +12,15 @@ function getLetter() {
 
     return randomLetter
 }
-for (let a = 0; a < 16; a++)
-
+for (let a = 0; a < 16; a++){
 //NOTE // Generates array to hold random letters
-letterBoard.push(getLetter())
+    letterBoard.push(getLetter())
+    letterBank.splice(letterBank.indexOf(randomLetter), 1)
+}
 console.log(letterBoard)
-for (let y = 0; y < letterBoard.length; y++)
-console.log(letterBoard[y])
-
-// letterBank.splice(letterBank.indexOf(randomLetter), 1)
-
 console.log(letterBank)
+
+
 
 const gameSquares = {
     $sq1: $('#1'), 
