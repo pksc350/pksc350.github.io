@@ -1,5 +1,13 @@
 //W3 Schools
 $("#begin").click(function(){
+//Webdeveloper.com
+    this.style.visibility="hidden"
+
+    document.getElementById("instructions").style.fontSize = "20px";
+    document.getElementById("instructions").style.height = "50px";
+    document.getElementById("instructions").style.width = "100px";
+    document.getElementById("instructions").style.marginLeft = "320px";
+
     $(".game-screen").toggle()
 })
 
