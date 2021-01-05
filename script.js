@@ -1,3 +1,8 @@
+//W3 Schools
+$("#begin").click(function(){
+    $(".game-screen").toggle()
+})
+
 let randomLetter;
 
 //NOTE //Letter Bank for Squares to choose from
@@ -19,7 +24,6 @@ for (let a = 0; a < 16; a++){
 }
 console.log(letterBoard)
 console.log(letterBank)
-
 
 
 const gameSquares = {

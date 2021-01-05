@@ -137,3 +137,28 @@ form {
 button {
   background-color: white;
 }
+
+#begin {
+  height: 100px;
+  width: 220px;
+  margin-left: 25px;
+  font-family: Oswald;
+  font-size: 50px;
+}
+
+#instructions {
+  height: 100px;
+  width: 220px;
+  margin-left: 25px;
+  font-family: Oswald;
+  font-size: 50px;
+}
+
+.opening-screen {
+  display: flex;
+  justify-content: center;
+}
+
+.game-screen {
+  display: none;
+}
