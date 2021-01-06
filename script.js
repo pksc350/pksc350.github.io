@@ -21,6 +21,16 @@ $("#instructions").click(function(){
     // }
 })
 
+$("#pause").click(function(){
+    if(document.getElementById("pause").innerHTML === "Pause"){
+    timerFuncs.pause()
+    document.getElementById("pause").innerHTML = "Resume"
+} else {
+    timerFuncs.resume()
+    document.getElementById("pause").innerHTML = "Pause"
+}
+})
+
 let randomLetter;
 let word = []
 let points = 0;
