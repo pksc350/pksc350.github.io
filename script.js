@@ -25,9 +25,12 @@ $("#pause").click(function(){
     if(document.getElementById("pause").innerHTML === "Pause"){
     timerFuncs.pause()
     document.getElementById("pause").innerHTML = "Resume"
+    document.getElementById("table").style.color = "white"
+
 } else {
     timerFuncs.resume()
     document.getElementById("pause").innerHTML = "Pause"
+    document.getElementById("table").style.color = "black"
 }
 })
 
