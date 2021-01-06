@@ -179,3 +179,15 @@ button {
 #timer {
   margin-left: 20px;
 }
+
+.game-instruction {
+  font-family: Lato;
+}
+
+#instruction-heading {
+  font-family: Oswald;
+}
+
+#instruction-screen {
+  display: none;
+}

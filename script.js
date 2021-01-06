@@ -9,23 +9,35 @@ $("#begin").click(function(){
     document.getElementById("instructions").style.marginLeft = "320px";
 
     $(".game-screen").toggle()
+
+    timerFuncs.start()
+})
+
+$("#instructions").click(function(){
+    $("#instruction-screen").toggle()
+    
+    // if(document.getElementById("instruction-screen").style.display !== "none"){
+    //     document.getElementByClassName("game-screen").style.visibility = "hidden"
+    // }
 })
 
 let randomLetter;
 let word = []
+let points = 0;
 
 //NOTE //Letter Bank for Squares to choose from
 let letterBank = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "C", "C", "D", "D", "D", "D", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "F", "F", "G", "G", "G", "H", "H", "I", "I", "I", "I", "I", "I", "I", "I", "I", "J", "K", "L", "L", "L", "L", "M", "M", "N", "N", "N", "N", "N", "N", "O", "O", "O", "O", "O", "O", "O", "O", "P", "P", "Q", "R", "R", "R", "R", "R", "R", "S", "S", "S", "S", "T", "T", "T", "T", "T", "T", "U", "U", "U", "U", "V", "V", "W", "W", "X", "Y", "Y", "Z"]
 // for (let i = 0; i < letterBank.length; i++)
 
-//Stack Overflow
-A = E = I = L = N = O = R = S = T = U = 1
-D = G = 2
-B = C = M = P = 3
-F = H = V = W = Y = 4
-K = 5
-J = X = 8
-Q = Z = 10
+let letterPoints = {
+    1: ["A", "E", "I", "L", "N", "O", "R", "S", "T", "U"],
+    2: ["D", "G"],
+    3: ["B", "C", "M", "P"],
+    4: ["F", "H", "V", "W", "Y"],
+    5: ["K"],
+    8: ["J", "X"],
+    10: ["Q", "Z"],
+}
 
 
 let letterBoard = [];
@@ -95,19 +107,35 @@ gameSquares.$sq16.html(letterBoard[15])
 
 
 //NOTE Timer - Stack Overflow
-let counter = 60 
-let countdown = setInterval(function(){
-    counter --;
+let timerFuncs = {
+counter: 60,
 
-    if (counter >= 0) {
+start: function() {
+    let countdown = this
+    
+    this.interval = setInterval(function(){
+    countdown.counter --;
+
+    if (countdown.counter >= 0) {
         span = document.getElementById("timer")
-        span.innerHTML = `${counter}`;
+        span.innerHTML = `${countdown.counter}`;
     }
 
-    if (counter === 0){
+    if (countdown === 0){
     clearInterval(counter)
     }
 }, 1000)
+},
+
+pause: function (){
+    clearInterval(this.interval)
+    delete this.interval;
+},
+
+resume: function(){
+    if (!this.interval) this.start()
+}
+}
 
 // const sq1 = document.getElementById("1")
 // sq1.addEventListener('click', event => {
@@ -123,7 +151,7 @@ let words = table.addEventListener('click', evt => {
     if(chosenLetter === word[word.length - 1]){
         alert('Pick a different letter')
     } else {
-        evt.target.style.backgroundColor = "#c2e3e3"
+        // evt.target.style.backgroundColor = "#c2e3e3"
         $("#chosen-letters").append(`<div class='game-ltrs'>${chosenLetter}</div>`)
         word.push(chosenLetter)
     }
@@ -160,9 +188,22 @@ let submitWord = submitBtn.addEventListener('click', evt => {
 
     word = []
 
+    console.log(scorePoints(word))
+
     $('.game-ltrs').remove()
 
     } else if(word.length <= 2){
         alert('Word too short - need at least 3 characters')
     } 
 })
+
+//https://exercism.io/tracks/javascript/exercises/scrabble-score/solutions/adac4a7dca744e56bc9e3ab84ad8c309
+//Point scoring function
+function scorePoints(wrdltr){
+    for (let index in letterPoints)
+    {
+        if (Object.keys(letterPoints).indexOf((letterPoints[index].indexOf(wrdltr) !== -1) ? index.toString() : '-1') !== -1) {
+        }
+        return parseInt(index)
+    }
+}
