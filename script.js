@@ -106,16 +106,26 @@ let words = table.addEventListener('click', evt => {
     let chosenLetter = evt.target.innerText
     console.log(chosenLetter)
     evt.target.style.backgroundColor = "#c2e3e3"
-    $("#chosen-letters").append(chosenLetter)
+    $("#chosen-letters").append(`<div class='game-ltrs'>${chosenLetter}</div>`)
+    
     word.push(chosenLetter)
 })
 
 console.log(word)
 
+const clearBtn = document.getElementById("clear")
+let clearWord = clearBtn.addEventListener('click', evt => {
+
+    let submitWords = $('.game-ltrs')
+    if(submitWords.length > 0){
+        $('.game-ltrs').remove()
+    }
+})
+
 const submitBtn = document.getElementById("submit")
 let submitWord = submitBtn.addEventListener('click', evt => {
-    let node = document.createElement("li")
-    let textnode = document.createTextNode(word.join(''))
-    node.appendChild(textnode)
-    document.getElementById("word-list").appendChild(node)
+    let listItm = document.createElement("li")
+    let fullWrd = document.createTextNode(word.join(''))
+    listItm.appendChild(fullWrd)
+    document.getElementById("word-list").appendChild(listItm)
 })
