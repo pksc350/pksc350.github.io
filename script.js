@@ -116,16 +116,30 @@ console.log(word)
 const clearBtn = document.getElementById("clear")
 let clearWord = clearBtn.addEventListener('click', evt => {
 
+    let tblStyle = $('table')
     let submitWords = $('.game-ltrs')
     if(submitWords.length > 0){
         $('.game-ltrs').remove()
+
+        word = []
+        
+        //Have to come back to this - getting the table to reset it's background color to white
+        // document.getElementById('table').style.backgroundColor = "white"
     }
 })
 
+//NOTE //Gets words on found words "board"
 const submitBtn = document.getElementById("submit")
 let submitWord = submitBtn.addEventListener('click', evt => {
+
+    if(word.length >= 3 && word.length <= 15){
     let listItm = document.createElement("li")
     let fullWrd = document.createTextNode(word.join(''))
     listItm.appendChild(fullWrd)
     document.getElementById("word-list").appendChild(listItm)
+
+    word = []
+    } else if(word.length <= 2){
+        alert('Word too short - need at least 3 characters')
+    } 
 })
