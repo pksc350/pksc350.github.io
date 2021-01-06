@@ -90,13 +90,6 @@ td {
   margin-left: 20px;
 }
 
-form {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  margin-right: 200px;
-}
-
 #chosen-letters {
   width: 200px;
   font-family: "Courier New", Courier, monospace;
@@ -124,6 +117,8 @@ form {
 .submit-words {
   display: flex;
   justify-content: center;
+  margin-top: 25px;
+  margin-right: 200px;
 }
 
 .timer {

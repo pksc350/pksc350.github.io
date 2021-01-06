@@ -86,8 +86,14 @@
                 <div><h2 id="found-words-title">Found Words</h2><div>
                 
                 <div class="word-point-box">
-                <div id="words-list container"></div>
-                <div id="words-points container"></div>
+                <div id="words-list container">
+                    <ul id="word-list">
+                    </ul>
+                </div>
+                <div id="words-points container">
+                    <ul id="point-list">
+                    </ul>
+                </div>
                 </div>
                 <p id="total-points">Points: <span id="running-points">0</span></p>
             </div>
@@ -97,11 +103,9 @@
 
 
             <div class="submit-words">
-                <form>
                     <div id="chosen-letters"></div>
-                    <input type="submit" id="submit" value="Submit">
-                    <input type="submit" id="clear" value="Clear">
-                </form>
+                    <button id="submit">Submit</button>
+                    <button id="clear">Clear</button>
             </div>
 
             <div class="timer">

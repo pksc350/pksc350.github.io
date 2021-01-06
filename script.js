@@ -12,6 +12,7 @@ $("#begin").click(function(){
 })
 
 let randomLetter;
+let word = []
 
 //NOTE //Letter Bank for Squares to choose from
 let letterBank = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "C", "C", "D", "D", "D", "D", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "F", "F", "G", "G", "G", "H", "H", "I", "I", "I", "I", "I", "I", "I", "I", "I", "J", "K", "L", "L", "L", "L", "M", "M", "N", "N", "N", "N", "N", "N", "O", "O", "O", "O", "O", "O", "O", "O", "P", "P", "Q", "R", "R", "R", "R", "R", "R", "S", "S", "S", "S", "T", "T", "T", "T", "T", "T", "U", "U", "U", "U", "V", "V", "W", "W", "X", "Y", "Y", "Z"]
@@ -106,4 +107,15 @@ let words = table.addEventListener('click', evt => {
     console.log(chosenLetter)
     evt.target.style.backgroundColor = "#c2e3e3"
     $("#chosen-letters").append(chosenLetter)
+    word.push(chosenLetter)
+})
+
+console.log(word)
+
+const submitBtn = document.getElementById("submit")
+let submitWord = submitBtn.addEventListener('click', evt => {
+    let node = document.createElement("li")
+    let textnode = document.createTextNode(word.join(''))
+    node.appendChild(textnode)
+    document.getElementById("word-list").appendChild(node)
 })
