@@ -114,7 +114,7 @@ let countdown = setInterval(function(){
 //     sq1.style.backgroundColor = "grey"
 // })
 
-//NOTE Function to pick letters to make words
+//NOTE Function to pick letters to make words - you can't make doubles, but still needs troubleshooting 
 const table = document.querySelector("table")
 let words = table.addEventListener('click', evt => {
     let chosenLetter = evt.target.innerText
