@@ -21,6 +21,7 @@ $("#instructions").click(function(){
     // }
 })
 
+//NOTE this makes the timer work
 $("#pause").click(function(){
     if(document.getElementById("pause").innerHTML === "Pause"){
     timerFuncs.pause()
@@ -56,19 +57,32 @@ let letterPoints = {
 let letterBoard = [];
 
 //NOTE //Getting 16 random letters from the letter bank
-function getLetter() {
+let getLetter = function() {
     randomLetter = letterBank[Math.floor(Math.random() * letterBank.length)]
 
     return randomLetter
 }
-for (let a = 0; a < 16; a++){
+let generateArr = function(){
+    for (let a = 0; a < 16; a++){
 //NOTE // Generates array to hold random letters
     letterBoard.push(getLetter())
     letterBank.splice(letterBank.indexOf(randomLetter), 1)
 }
+} 
+
+generateArr()
+
 console.log(letterBoard)
 console.log(letterBank)
 
+
+$("#reset-button").click(function(){
+    word = []
+    letterBoard = []
+    getLetter()
+    generateArr()
+    renderBoard()
+})
 
 const gameSquares = {
     $sq1: $('#1'), 
@@ -117,6 +131,12 @@ gameSquares.$sq13.html(letterBoard[12])
 gameSquares.$sq14.html(letterBoard[13])
 gameSquares.$sq15.html(letterBoard[14])
 gameSquares.$sq16.html(letterBoard[15])
+
+    const renderBoard = function(){
+        for(let ii = 0; ii <= letterBoard.length - 1; ii++){
+            $(`#${ii+1}`).html(letterBoard[ii])
+    }
+}
 
 
 //NOTE Timer - Stack Overflow
@@ -201,8 +221,7 @@ let submitWord = submitBtn.addEventListener('click', evt => {
 
     word = []
 
-    console.log(scorePoints(word))
-
+    //Not working
     $('.game-ltrs').remove()
 
     } else if(word.length <= 2){
@@ -212,11 +231,17 @@ let submitWord = submitBtn.addEventListener('click', evt => {
 
 //https://exercism.io/tracks/javascript/exercises/scrabble-score/solutions/adac4a7dca744e56bc9e3ab84ad8c309
 //Point scoring function
-function scorePoints(wrdltr){
-    for (let index in letterPoints)
-    {
-        if (Object.keys(letterPoints).indexOf((letterPoints[index].indexOf(wrdltr) !== -1) ? index.toString() : '-1') !== -1) {
-        }
-        return parseInt(index)
-    }
-}
+// function scorePoints(wrdltr){
+//     for (let index in letterPoints)
+//     {
+//         if (Object.keys(letterPoints).indexOf((letterPoints[index].indexOf(wrdltr) !== -1) ? index.toString() : '-1') !== -1) {
+//         }
+//         return parseInt(index)
+//     }
+// }
+
+// let scorePoints = function(){
+//     for (let idx in letterPoints){
+//         if(Object.keys(letterPoints).indexOf(letterPoints[idx]))
+//     }
+// }
