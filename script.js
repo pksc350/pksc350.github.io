@@ -53,6 +53,37 @@ let letterPoints = {
     10: ["Q", "Z"],
 }
 
+console.log(letterPoints[8][1])
+
+// let letterPoints = {
+//     A: {value: 1},
+//     B: {value: 3},
+//     C: {value: 3},
+//     D: {value: 2},
+//     E: {value: 1},
+//     F: {value: 4},
+//     G: {value: 2},
+//     H: {value: 4},
+//     I: {value: 1},
+//     J: {value: 8},
+//     K: {value: 5},
+//     L: {value: 3},
+//     M: {value: 3},
+//     N: {value: 3},
+//     O: {value: 1},
+//     P: {value: 3},
+//     Q: {value: 10},
+//     R: {value: 3},
+//     S: {value: 1},
+//     T: {value: 3},
+//     U: {value: 1},
+//     V: {value: 4},
+//     W: {value: 4},
+//     X: {value: 8},
+//     Y: {value: 4},
+//     Z: {value: 10},
+// }
+
 
 let letterBoard = [];
 
@@ -231,19 +262,13 @@ let submitWord = submitBtn.addEventListener('click', evt => {
     } 
 })
 
-//https://exercism.io/tracks/javascript/exercises/scrabble-score/solutions/adac4a7dca744e56bc9e3ab84ad8c309
+let score = 0;
 //Point scoring function
-// function scorePoints(wrdltr){
-//     for (let index in letterPoints)
-//     {
-//         if (Object.keys(letterPoints).indexOf((letterPoints[index].indexOf(wrdltr) !== -1) ? index.toString() : '-1') !== -1) {
-//         }
-//         return parseInt(index)
-//     }
-// }
+let scorePoints = function(){
 
-// let scorePoints = function(){
-//     for (let idx in letterPoints){
-//         if(Object.keys(letterPoints).indexOf(letterPoints[idx]))
-//     }
-// }
+if (word.inlcudes("A") === true){
+    return score + 1
+}
+}
+
+console.log(word.includes("A"))

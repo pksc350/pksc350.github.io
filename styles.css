@@ -191,3 +191,8 @@ button {
 #instruction-screen {
   display: none;
 }
+
+.unclickable {
+  pointer-events: none;
+}
+/* Shout out to James Kim for this feature! */
