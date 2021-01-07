@@ -82,6 +82,9 @@ $("#reset-button").click(function(){
     getLetter()
     generateArr()
     renderBoard()
+    $('.game-ltrs').remove()
+
+    document.getElementById('word-list').innerHTML = ""
 })
 
 const gameSquares = {
@@ -221,7 +224,6 @@ let submitWord = submitBtn.addEventListener('click', evt => {
 
     word = []
 
-    //Not working
     $('.game-ltrs').remove()
 
     } else if(word.length <= 2){
