@@ -53,7 +53,7 @@ let letterPoints = {
     10: ["Q", "Z"],
 }
 
-console.log(letterPoints[8][1])
+// console.log(letterPoints[8][1])
 
 // let letterPoints = {
 //     A: {value: 1},
@@ -209,10 +209,18 @@ resume: function(){
 //     sq1.style.backgroundColor = "grey"
 // })
 
-//NOTE Function to pick letters to make words - you can't make doubles, but still needs troubleshooting 
+//NOTE Function to pick letters to make words - you can't make doubles, but still needs troubleshooting
+
+let score = []
+
+// function addValue(num){
+//     return score + num
+// }
+
 const table = document.querySelector("table")
 let words = table.addEventListener('click', evt => {
     let chosenLetter = evt.target.innerText
+
     console.log(chosenLetter)
 
     if(chosenLetter === word[word.length - 1]){
@@ -222,9 +230,19 @@ let words = table.addEventListener('click', evt => {
         $("#chosen-letters").append(`<div class='game-ltrs'>${chosenLetter}</div>`)
         word.push(chosenLetter)
     }
+
+    if(chosenLetter === "A"){
+        score.push(1)
+    }
+
+    if(chosenLetter === "E"){
+        score.push(5)
+    }
 })
 
+
 console.log(word)
+console.log(score)
 
 //NOTE // Clears the chosen letters field
 const tableSq = document.getElementById('table')
@@ -260,15 +278,33 @@ let submitWord = submitBtn.addEventListener('click', evt => {
     } else if(word.length <= 2){
         alert('Word too short - need at least 3 characters')
     } 
+
+
+    if(score.length > 0){
+        let wordPoints = score.reduce((a, b) => a + b, 0)
+        console.log(wordPoints)
+
+        let listPoint = document.createElement("li")
+
+        listPoint.append(wordPoints)
+        document.getElementById("point-list").appendChild(listPoint)
+    }
 })
 
-let score = 0;
+// for(let xx = 0; xx <= word.length; xx++)
+// let score = 0
 //Point scoring function
-let scorePoints = function(){
+// let scorePoints = function(){
 
-if (word.inlcudes("A") === true){
-    return score + 1
-}
-}
+// let score = 0;
 
-console.log(word.includes("A"))
+// if (word.some("A") === true){
+//     let points = score + 1
+// }
+// }
+
+// if (word.includes(`${letterPoints[1][1]}`)){
+//     (score + 1)
+// }
+
+// console.log(score + 1)
