@@ -72,6 +72,7 @@ td {
   width: 200px;
   border: 2px solid black;
   background-color: white;
+  display: flex;
 }
 
 #found-words-title {
@@ -196,3 +197,7 @@ button {
   pointer-events: none;
 }
 /* Shout out to James Kim for this feature! */
+
+#point-list {
+  list-style-type: none;
+}

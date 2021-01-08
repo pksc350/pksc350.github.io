@@ -234,9 +234,80 @@ let words = table.addEventListener('click', evt => {
     if(chosenLetter === "A"){
         score.push(1)
     }
-
+    if(chosenLetter === "B"){
+        score.push(3)
+    }
+    if(chosenLetter === "C"){
+        score.push(3)
+    }
+    if(chosenLetter === "D"){
+        score.push(2)
+    }
     if(chosenLetter === "E"){
+        score.push(1)
+    }
+    if(chosenLetter === "F"){
+        score.push(4)
+    }
+    if(chosenLetter === "G"){
+        score.push(2)
+    }
+    if(chosenLetter === "H"){
+        score.push(4)
+    }
+    if(chosenLetter === "I"){
+        score.push(1)
+    }
+    if(chosenLetter === "J"){
+        score.push(8)
+    }
+    if(chosenLetter === "K"){
         score.push(5)
+    }
+    if(chosenLetter === "L"){
+        score.push(1)
+    }
+    if(chosenLetter === "M"){
+        score.push(3)
+    }
+    if(chosenLetter === "N"){
+        score.push(1)
+    }
+    if(chosenLetter === "O"){
+        score.push(1)
+    }
+    if(chosenLetter === "P"){
+        score.push(3)
+    }
+    if(chosenLetter === "Q"){
+        score.push(10)
+    }
+    if(chosenLetter === "R"){
+        score.push(1)
+    }
+    if(chosenLetter === "S"){
+        score.push(1)
+    }
+    if(chosenLetter === "T"){
+        score.push(1)
+    }
+    if(chosenLetter === "U"){
+        score.push(1)
+    }
+    if(chosenLetter === "V"){
+        score.push(4)
+    }
+    if(chosenLetter === "W"){
+        score.push(4)
+    }
+    if(chosenLetter === "X"){
+        score.push(8)
+    }
+    if(chosenLetter === "Y"){
+        score.push(4)
+    }
+    if(chosenLetter === "Z"){
+        score.push(10)
     }
 })
 
