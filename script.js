@@ -110,12 +110,15 @@ console.log(letterBank)
 $("#reset-button").click(function(){
     word = []
     letterBoard = []
+    score = []
     getLetter()
     generateArr()
     renderBoard()
     $('.game-ltrs').remove()
 
     document.getElementById('word-list').innerHTML = ""
+    document.getElementById('point-list').innerHTML = ""
+    document.getElementById('running-points').innerHTML = "0"
 })
 
 const gameSquares = {
@@ -212,6 +215,7 @@ resume: function(){
 //NOTE Function to pick letters to make words - you can't make doubles, but still needs troubleshooting
 
 let score = []
+let totalScore = []
 
 // function addValue(num){
 //     return score + num
@@ -233,81 +237,107 @@ let words = table.addEventListener('click', evt => {
 
     if(chosenLetter === "A"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "B"){
         score.push(3)
+        totalScore.push(3)
     }
     if(chosenLetter === "C"){
         score.push(3)
+        totalScore.push(3)
     }
     if(chosenLetter === "D"){
         score.push(2)
+        totalScore.push(2)
     }
     if(chosenLetter === "E"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "F"){
         score.push(4)
+        totalScore.push(4)
     }
     if(chosenLetter === "G"){
         score.push(2)
+        totalScore.push(2)
     }
     if(chosenLetter === "H"){
         score.push(4)
+        totalScore.push(4)
     }
     if(chosenLetter === "I"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "J"){
         score.push(8)
+        totalScore.push(8)
     }
     if(chosenLetter === "K"){
         score.push(5)
+        totalScore.push(5)
     }
     if(chosenLetter === "L"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "M"){
         score.push(3)
+        totalScore.push(3)
     }
     if(chosenLetter === "N"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "O"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "P"){
         score.push(3)
+        totalScore.push(3)
     }
     if(chosenLetter === "Q"){
         score.push(10)
+        totalScore.push(10)
     }
     if(chosenLetter === "R"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "S"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "T"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "U"){
         score.push(1)
+        totalScore.push(1)
     }
     if(chosenLetter === "V"){
         score.push(4)
+        totalScore.push(4)
     }
     if(chosenLetter === "W"){
         score.push(4)
+        totalScore.push(4)
     }
     if(chosenLetter === "X"){
         score.push(8)
+        totalScore.push(8)
     }
     if(chosenLetter === "Y"){
         score.push(4)
+        totalScore.push(4)
     }
     if(chosenLetter === "Z"){
         score.push(10)
+        totalScore.push(10)
     }
 })
 
@@ -359,6 +389,14 @@ let submitWord = submitBtn.addEventListener('click', evt => {
 
         listPoint.append(wordPoints)
         document.getElementById("point-list").appendChild(listPoint)
+    }
+
+    score = []
+
+    if(totalScore.length > 0){
+        let wordsTotal = totalScore.reduce((a, b) => a + b, 0)
+
+        document.getElementById("running-points").innerHTML = wordsTotal
     }
 })
 
