@@ -43,15 +43,15 @@ let points = 0;
 let letterBank = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "C", "C", "D", "D", "D", "D", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "F", "F", "G", "G", "G", "H", "H", "I", "I", "I", "I", "I", "I", "I", "I", "I", "J", "K", "L", "L", "L", "L", "M", "M", "N", "N", "N", "N", "N", "N", "O", "O", "O", "O", "O", "O", "O", "O", "P", "P", "Q", "R", "R", "R", "R", "R", "R", "S", "S", "S", "S", "T", "T", "T", "T", "T", "T", "U", "U", "U", "U", "V", "V", "W", "W", "X", "Y", "Y", "Z"]
 // for (let i = 0; i < letterBank.length; i++)
 
-let letterPoints = {
-    1: ["A", "E", "I", "L", "N", "O", "R", "S", "T", "U"],
-    2: ["D", "G"],
-    3: ["B", "C", "M", "P"],
-    4: ["F", "H", "V", "W", "Y"],
-    5: ["K"],
-    8: ["J", "X"],
-    10: ["Q", "Z"],
-}
+// let letterPoints = {
+//     1: ["A", "E", "I", "L", "N", "O", "R", "S", "T", "U"],
+//     2: ["D", "G"],
+//     3: ["B", "C", "M", "P"],
+//     4: ["F", "H", "V", "W", "Y"],
+//     5: ["K"],
+//     8: ["J", "X"],
+//     10: ["Q", "Z"],
+// }
 
 // console.log(letterPoints[8][1])
 
@@ -208,19 +208,12 @@ resume: function(){
 
 }
 
-// const sq1 = document.getElementById("1")
-// sq1.addEventListener('click', event => {
-//     sq1.style.backgroundColor = "grey"
-// })
 
 //NOTE Function to pick letters to make words - you can't make doubles, but still needs troubleshooting
 
 let score = []
 let totalScore = []
 
-// function addValue(num){
-//     return score + num
-// }
 
 const table = document.querySelector("table")
 let words = table.addEventListener('click', evt => {
@@ -420,23 +413,6 @@ let submitWord = submitBtn.addEventListener('click', evt => {
     
 })
 
-// for(let xx = 0; xx <= word.length; xx++)
-// let score = 0
-//Point scoring function
-// let scorePoints = function(){
-
-// let score = 0;
-
-// if (word.some("A") === true){
-//     let points = score + 1
-// }
-// }
-
-// if (word.includes(`${letterPoints[1][1]}`)){
-//     (score + 1)
-// }
-
-// console.log(score + 1)
 
 //NOTE Level Up / Win State
 
