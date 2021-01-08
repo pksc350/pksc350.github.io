@@ -205,6 +205,7 @@ pause: function (){
 resume: function(){
     if (!this.interval) this.start()
 }
+
 }
 
 // const sq1 = document.getElementById("1")
@@ -229,6 +230,8 @@ let words = table.addEventListener('click', evt => {
 
     if(chosenLetter === word[word.length - 1]){
         alert('Pick a different letter')
+        score.pop()
+        totalScore.pop()
     } else {
         // evt.target.style.backgroundColor = "#c2e3e3"
         $("#chosen-letters").append(`<div class='game-ltrs'>${chosenLetter}</div>`)
@@ -398,6 +401,23 @@ let submitWord = submitBtn.addEventListener('click', evt => {
 
         document.getElementById("running-points").innerHTML = wordsTotal
     }
+
+    let joinWord = word.join('')
+    let thisWord = joinWord
+    $.ajax({
+        url: `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${thisWord}?key=53f242ce-0801-488a-931d-791646df2e86`
+    }).then(
+        (meta) => {
+            if(meta.id = true){
+            console.log('word')
+        } else if (meta.id = false){
+            console.log('not a word')
+        }
+        // (error) => {
+        //     console.log('word does not exist', error)
+        }
+    )
+    
 })
 
 // for(let xx = 0; xx <= word.length; xx++)
@@ -417,3 +437,11 @@ let submitWord = submitBtn.addEventListener('click', evt => {
 // }
 
 // console.log(score + 1)
+
+//NOTE Level Up / Win State
+
+if(document.getElementById('timer').innerHTML === 0 && totalScore > 50){
+    alert('Congratulations! Time to move to level 2')
+} else if(document.getElementById('timer').innerHTML === 0 && totalScore < 50){
+    alert("Sorry, you don't have enough points - time to start over")
+}

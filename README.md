@@ -67,8 +67,17 @@
 
 ## Approach:
 
+- I am working on small feats first and then using those to move me forward in the more dynamic parts of the code
+- Some areas required hard-coding so that I could move forward, then come back to these issues later to make them less repetative
+
 ## Challenges:
+
+- Getting the rounds to change once the timer expired
+- Finding a way to get the total points on the board
+- Having the letter sqaures reference their corresponding id on the board when generating random letters for the board
 
 ## Additional Information:
 
 ## App Demo:
+
+https://pksc350.github.io/
