@@ -64,6 +64,7 @@
 - JavaScript
 - Bootstrap
 - Google Fonts
+- Merriam Webster API
 
 ## Approach:
 
@@ -75,8 +76,8 @@
 - Getting the rounds to change once the timer expired
 - Finding a way to get the total points on the board
 - Having the letter sqaures reference their corresponding id on the board when generating random letters for the board
-
-## Additional Information:
+- Selecting adjacent letters
+- Not having repeating words
 
 ## App Demo:
 
