@@ -264,6 +264,10 @@ let timerFuncs = {
             alert(
               "Congrats, you're moving on to the next level. Click ok to start"
             );
+            lettersClicked.forEach((cell) => {
+              document.getElementById(cell).style.backgroundColor = "white";
+            });
+            lettersClicked = [];
             currentLevel++;
             resetGame();
           }
